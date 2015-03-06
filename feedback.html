@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">QNX</a>
+			</div>
+			<ul>
+				<li class="selected">
+					<a href="index.html">home</a>
+				</li>
+				<li>
+					<a href="feedback.html">feedback</a>
+				</li>
+				<li>
+					<a href="quiz.html">Quiz up</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+<form method="POST" name="wordcount">
+                First name:<br>
+                   <input type="text" name="firstname">
+                 </br>
+               Last name:<br>
+                <input type="text" name="lastname">
+				</br>
+				<label>Email Address</label>
+				<br></br>
+					<input type="text" value="">
+					<br></br>
+                 <input type="radio" name="sex" value="male" checked>Male
+                   <br></br>
+                   <input type="radio" name="sex" value="female">Female
+				   
+  <script language="JavaScript">
+
+function countit(){
+
+var formcontent=document.wordcount.wordcount2.value
+formcontent=formcontent.split(" ")
+document.wordcount.wordcount3.value=formcontent.length
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%"><textarea rows="12" name="wordcount2" cols="60" wrap="virtual"></textarea></td>
+    </tr>
+    <tr>
+      <td width="100%"><div align="right"><p><input type="button" value="Calculate Words"
+      onClick="countit()"> <input type="text" name="wordcount3" size="20"></p>
+     </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+

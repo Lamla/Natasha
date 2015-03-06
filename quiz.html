@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<input type = "button" value = " Start"
+    onclick = "startMe();"/>
+	<input type = "text" id = "txt"/>
+	  <input type = "button" value ="Stop"
+    onclick = "stopMe();"/>
+	
+</head>
+<body>
+	
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">QNX</a>
+			</div>
+			<ul>
+				<li class="selected">
+					<a href="index.html">home</a>
+				</li>
+				<li>
+					<a href="feedback.html">feedback</a>
+				</li>
+				<li>
+					<a href="quiz.html">Quiz up</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div id="body">
+		<div class="article">
+		<img src= ""/>
+			<form action="home.html" method="post" class="message">
+			<ul>
+			<li>
+					<label>1: <strong> QNX Maserati runs on Windows </strong></label>
+					<br></br>
+				<input type="radio" name="Question 1" id ="q1a" value="Yes" checked>Yes
+                   <br></br>
+                   <input type="radio" name="Question 1" id ="q1b" value="Not Sure">Maybe
+                   <br><br>
+				   <input type="radio" name="Question 1" id ="q1c" value="Nope">Nope
+                   <br><br>
+				    <br><br>
+				   </li>
+				   
+				   <li>
+				   <label>2: <strong> Is the traditional oval grille featured on the GTS </strong></label>
+					<br></br>
+				<input type="radio" name="Question 2" id ="q2a" value="Yes" checked>Yes
+                   <br></br>
+                   <input type="radio" name="Question 2" id ="q2b" value="Not Sure">Maybe
+                   <br><br>
+				   <input type="radio" name="Question 2" id ="q2c" value="Nope">Nope
+                   <br><br>
+				   </li>
+				   
+				   <li>
+				   <label>3: <strong> The QNX Maserati dashboard is based on  the Rightware Kanzi </strong></label>
+					<br></br>
+				<input type="radio" name="Question 3" id = "q3a" value="Yes" checked>Yes
+                   <br></br>
+                   <input type="radio" name="Question 3" id = "q3b" value="Not Sure">Maybe
+                   <br><br>
+				   <input type="radio" name="Question 3" id = "q3c" value="Nope">Nope
+                   <br><br>
+				   <input type="button" name="submit" value="Submit" onClick="theQuiz();"> 
+				   </li>
+				   </ul>
+				</form>
+				
+			
+		</div>
+	</div>
+	
+	<script type  = "text/javascript">
+	
+	function theQuiz(){
+	 var cnt = 100;
+     var t;
+     var isOn = false;
+	var cntC = 0;
+	var cntI = 0;
+	
+	var crtAnswer = document.getElementById("q1c");
+	if ( crtAnswer.checked === true){
+	  cntC += 1;
+	}
+	else{
+	  cntI += 1;
+	  }
+	  var crtAnswer = document.getElementById("q2a");
+	if ( crtAnswer.checked === true){
+	  cntC += 1;
+	}
+	else{
+	  cntI += 1;
+	  }
+	  var crtAnswer = document.getElementById("q3a");
+	if ( crtAnswer.checked === true){
+	  cntC += 1;
+	}
+	else{
+	  cntI += 1;
+	  }
+
+	alert ("You have got " + cntC +  " correct answers and " +  cntI +  " incorrect answers");
+	}
+	 var cnt = 30;
+     var t;
+    var isOn = false;
+	 function countdown(){
+    document.getElementById("txt").value = cnt;
+	cnt --;
+	t = setTimeout("countdown();" , 1000);
+  }
+  
+  function stopMe(){
+  isOn = false
+  clearTimeout(t);
+  }
+  function startMe(){
+  
+     if (!isOn){
+        isOn = true;
+		countdown();
+     }
+  
+  }
+	
+	</script>
+	
+</body>
+</html>
